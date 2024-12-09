@@ -1,0 +1,38 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, initalnum = 0,rem = 0,sum = 0;
+    
+    cout << "Enter a number: ";
+    cin >> num;
+
+    initalnum = num;
+    
+    while(num > 0){
+        rem = num % 10;
+        int fact = 1;
+        
+        cout << "Digit is " << rem << " and its factorial is ";
+       
+        for(int i=rem;i>0;i--){
+            fact = fact * i;
+        }
+        
+        sum = sum + fact;
+        
+        cout << fact << endl;
+        
+        num = num / 10;
+    }
+    
+    
+    if(initalnum == sum){
+    cout << "Digits factorial sum is " << sum << " so " << initalnum << " is a strong number " << endl; 
+    }else {
+        cout << "Digits factorial sum is " << sum << " so " << initalnum << " is not strong number " << endl;
+    }
+
+    return 0;
+}

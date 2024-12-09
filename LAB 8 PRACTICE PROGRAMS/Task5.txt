@@ -1,0 +1,22 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num,rem,sum,square;
+    
+    cout << "Enter a number: ";
+    cin >> num;
+    
+    while(num > 0){
+        rem = num % 10;
+        square = rem * rem;
+        cout << "Digit is " << rem << " its square is " << square << endl;
+        sum = sum + square;
+        num = num / 10;
+    }
+    
+    cout << "Square Digit sum for the number is: " << sum << endl;
+
+    return 0;
+}

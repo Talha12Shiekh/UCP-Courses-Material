@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+
+int main(){
+    int num;
+    
+    cout << "Enter a number: ";
+    cin >> num;
+    
+    if(num == 0){
+        cout << "Binary equivalent for the " << num << " is 0" << endl;
+        return 0;
+    }
+    
+    int binaryDigit;
+    bool firstDigit = true;
+    
+    cout << "Number is " << num << " and its equivalent binary is :";
+    
+    while(num > 0){
+        binaryDigit = num % 2;
+        if(!firstDigit || binaryDigit == 1){
+            cout << binaryDigit;
+            firstDigit = false;
+        }
+        num = num /2;
+    }
+    
+    return 0;
+}
